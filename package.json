@@ -1,0 +1,31 @@
+{
+  "name": "thomas",
+  "version": "1.0.0",
+  "description": "My mind-blowing Nuxt.js project",
+  "author": "Jérôme Desseaux",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/dotenv": "^1.4.0",
+    "child_process": "^1.0.2",
+    "dgram": "^1.0.1",
+    "dns": "^0.2.2",
+    "express": "^4.17.1",
+    "fs": "^0.0.1-security",
+    "net": "^1.0.2",
+    "nodemailer": "^6.4.8",
+    "nuxt": "^2.0.0",
+    "tls": "0.0.1",
+    "validator": "^13.0.0",
+    "xss-filters": "^1.2.7"
+  },
+  "devDependencies": {
+    "@nuxtjs/vuetify": "^1.0.0"
+  }
+}
