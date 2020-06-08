@@ -2,7 +2,7 @@ import colors from "vuetify/es5/util/colors";
 
 export default {
   mode: "universal",
-  serverMiddleware: ["~/middleware/mailer"],
+  // serverMiddleware: ["~/middleware/mailer"],
   /*
    ** Headers of the page
    */

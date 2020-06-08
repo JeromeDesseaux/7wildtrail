@@ -169,11 +169,15 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   components: {},
   methods: {
     submit: function() {
       console.log("submitted");
+      alert("Déclencher le paiement stripe.")
+      // this.sendEmail();
     },
     addProductToCard: function(product) {
       this.selected.push(product);
@@ -191,6 +195,8 @@ export default {
       return hasProducts
         ? `Payer ${sum}€`
         : `Sélectionnez un ou plusieurs produits`;
+    },
+    sendEmail: function() {
     }
   },
   data: function() {
