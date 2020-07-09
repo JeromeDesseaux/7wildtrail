@@ -312,7 +312,7 @@ export default {
       amount: 1000,
       snackbar: false,
       isValid: false,
-      publishableKey: "pk_test_lCUIYvTIRl0ZqaxkUjgEvhuP00p0M3JeEg", 
+      publishableKey: "pk_live_gt892SorooQt9dh7eG9Va7sU00X8kIYVpD", 
       selected: [],
       first_name: "",
       last_name: "",
