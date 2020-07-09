@@ -10,7 +10,7 @@
                 contain
                 max-height="180"
               ></v-img>
-      <h1 class="my-10">7 Wild Trail</h1>
+      <h1 class="my-10">7 Wild Trail {{process.env.STRIPE_SUCCESS}}</h1>
       <v-card class="mt-10">
         <v-card-text>
           <p>
