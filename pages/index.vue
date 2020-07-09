@@ -214,7 +214,7 @@ import axios from "axios";
 import emailjs from 'emailjs-com';
 var service_id = "default_service";
 var template_id = "template_ay9aVQN9";
-var user_id = process.env.MAILJET_ID;
+var user_id = "user_CaI0G7bimMynXpfJfBFUa";
 // const sgMail = require('@sendgrid/mail');
 // sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
@@ -306,13 +306,13 @@ export default {
       loading: false,
       dialog: false,
       token: null,
-      successUrl: process.env.STRIPE_SUCCESS,
-      cancelUrl: process.env.STRIPE_ERROR,
+      successUrl: "https://awesome-colden-440d1b.netlify.app/success",
+      cancelUrl: "https://awesome-colden-440d1b.netlify.app/error",
       charge: null,
       amount: 1000,
       snackbar: false,
       isValid: false,
-      publishableKey: process.env.STRIPE_PUBKEY, 
+      publishableKey: "pk_test_lCUIYvTIRl0ZqaxkUjgEvhuP00p0M3JeEg", 
       selected: [],
       first_name: "",
       last_name: "",

@@ -25,7 +25,7 @@
 import emailjs from 'emailjs-com';
 var service_id = "default_service";
 var template_id = "template_ay9aVQN9";
-var user_id = process.env.MAILJET_ID;
+var user_id = "user_CaI0G7bimMynXpfJfBFUa";
 
 export default {
     mounted() {
