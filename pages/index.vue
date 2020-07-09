@@ -159,7 +159,12 @@
                         :rules="[v => !!v || 'Champs requis']"
                       ></v-text-field>
                     </v-col>
-                    <v-col cols="12">
+                    <v-col cols="12" v-if="ceintureCommandee()">
+                      <v-select
+                        v-model="emailForm.size"
+                        :items="products[3].tailles"
+                        label="Taille ceinture"
+                      ></v-select>
                       <!-- <stripe-elements
                         ref="elementsRef"
                         :pk="publishableKey"
@@ -249,13 +254,17 @@ export default {
         ? `Payer ${sum}€`
         : `Sélectionnez un ou plusieurs produits`;
     },
+    ceintureCommandee: function() {
+      return this.selected.filter(x => x.id == 4).length > 0;
+
+    },
     sendEmail: function() {
       var template_params = this.emailForm;
       template_params.from_name = this.name;
       let products = this.products;
       this.items.forEach(function(value, key) {
         let product = products.find(x => x.stripe == value.price);
-        template_params.message += `${value.quantity}x ${product.nom}\n` 
+        template_params.message += `${value.quantity}x ${product.nom} / ` 
       });
       localStorage.form = JSON.stringify(template_params);
       // emailjs.send(service_id,template_id, template_params, user_id);
@@ -317,6 +326,7 @@ export default {
       first_name: "",
       last_name: "",
       emailForm: {
+        "size": "Aucune ceinture commandée",
         "from_name": "",
         "to_name": "Christophe",
         "from_email": "",
@@ -359,6 +369,7 @@ export default {
           stripe: "price_1H2tMNCxSmypN2CIuJSFUHxM",
           nom: "Ceinture Trail",
           description: "Ceinture Trail Raidlight.",
+          tailles: ['S','M','L'],
           prix: 25,
           img: "ceinture.jpg"
         }
